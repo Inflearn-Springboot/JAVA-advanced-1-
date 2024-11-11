@@ -14,11 +14,6 @@ public class NewOrderService {
         ShippingWork shippingWork = new ShippingWork(orderNo);
         AccountingWork accountingWork = new AccountingWork(orderNo);
 
-        // 작업 요청
-//        Boolean inventoryResult = inventoryWork.call();
-//        Boolean shippingResult = shippingWork.call();
-//        Boolean accountingResult = accountingWork.call();
-
         //작업들을 ExecutorService에 제출
         Future<Boolean> inventoryFuture = es.submit(inventoryWork);
         Future<Boolean> shippingFuture = es.submit(shippingWork);
