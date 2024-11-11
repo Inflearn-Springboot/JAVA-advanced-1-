@@ -12,7 +12,7 @@ public class FutureCancelMain {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService es = Executors.newFixedThreadPool(1);
         Future<String> future = es.submit(new MyTask());
-        log("Future.state : " + future.get());
+//        log("Future.state : " + future.state());
 
         sleep(3000);
 
