@@ -18,6 +18,7 @@ public class RejectMainV4 {
         executor.submit(new RunnableTask("task1"));
         executor.submit(new RunnableTask("task2"));
         executor.submit(new RunnableTask("task3"));
+        executor.submit(new RunnableTask("task4"));
 
         executor.shutdown();
     }
