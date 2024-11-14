@@ -5,6 +5,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 import static thread.executor.ExecutorUtils.printState;
+import static util.MyLogger.log;
 
 public class PrestartPoolMain {
     public static void main(String[] args) {
@@ -12,6 +13,6 @@ public class PrestartPoolMain {
         printState(es);
         ThreadPoolExecutor poolExecutor = (ThreadPoolExecutor) es;
         poolExecutor.prestartAllCoreThreads();
-        printState(es);
+        log("es" + es);
     }
 }
